@@ -1,0 +1,24 @@
+<div class="singlepost">
+    <div class="card">
+        <h3>{{post.title}}</h3>
+        <div> Posted by {{post.User.username}}</div>
+        <div>{{post.body}}</div>
+    </div>
+
+
+    {{> post-info post}}
+    {{#if loggedIn}}
+    <div class="card">
+        <form class="comment-form">
+            <div>
+                <label class="form-label">Comment</label>
+                <input id="comment" name="comment-body" class="form-input" />
+                <button type="submit">Add Comment</button>
+            </div>
+        </form>
+    </div>
+    {{/if}}
+
+    {{> comments post.comments}}
+</div>
+<script src="/javascript/comment.js"></script>

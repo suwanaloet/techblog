@@ -1,0 +1,62 @@
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: #333;
+  }
+
+  a {
+    text-decoration: none;
+    color: #225ca3;
+    font-weight: bold;
+    transition: color .1s;
+  }
+
+  a:hover {
+    color: #3486eb;
+  }
+
+  button {
+    background-color: #223aa3;
+    border: 0;
+    padding: 1%;
+    color: white;
+    font-weight: bold;
+    transition: background-color .1s;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  button:hover {
+    background-color: #34a2eb;
+  }
+
+  .navbar {
+    width: 100%;
+    background-color: #7d7d7d;
+  }
+  
+
+.nav-el {
+  margin: 0 40px;
+}
+
+.nav-el a {
+  color: var(--primary);
+}
+
+.hero {
+  padding: 3% 4%;
+  background-color:#7d7d7d;
+  color: #ffaa;
+}

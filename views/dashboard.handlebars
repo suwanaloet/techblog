@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Blog</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li class="nav-el"><a href="/">Home</a></li>
+            <li class="nav-el"><a href="/dashboard">Dashboard</a></li>
+            <li class="nav-el"><a href="/login">Login</a></li>
+            <li class="nav-el"><a href="#" id="logout-link">Logout</a></li>
+        </ul>
+    </nav>
+    <header>
+        Tech Blog
+    </header>
+    <main>
+        {{{ body }}}
+    </main>
+    <footer>
+        Thanks for visiting The Tech Blog
+    </footer>
+</body>
+{{#if posts.length}}
+<section>
+    <h2>Your Posts</h2>
+    <ol>
+        {{#each posts as |post|}}
+        <li>
+            {{> post-info post}}
+            <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+        </li>
+        {{/each}}
+    </ol>
+</section>
+{{/if}}
+
+<script src="/public/javascript/add-post.js"></script>
