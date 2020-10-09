@@ -40,3 +40,5 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log(`Now listening on port ${PORT}!`));
 });
+
+//https://tranquil-cove-11483.herokuapp.com/ | https://git.heroku.com/tranquil-cove-11483.git
